@@ -1,0 +1,17 @@
+.mat-card {
+  margin: 24px 0;
+}
+.placeTitle {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+.placeAddress {
+  margin-bottom: 12px;
+}
+.placePhone {
+  margin-bottom: 12px;
+}
+.placeLabel {
+  font-weight: 700;
+}
