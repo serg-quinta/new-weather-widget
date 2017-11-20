@@ -6,11 +6,11 @@ import 'rxjs/add/observable/of';
 const places: Place[] = [
   {
     'title': 'Road',
-    'img': 'assets/places/danka-peter-48152.jpg',
+    'img': 'assets/places/road.jpg',
     'address': '123 6th St. Melbourne, FL 32904',
     'phone': 6304468851,
     'weather': {
-      'title': 'string',
+      'title': 'Weather on Road',
       'icon': 'string',
       'water': 20,
       'temperature': 14
@@ -25,11 +25,11 @@ const places: Place[] = [
   },
   {
     'title': 'Lake',
-    'img': 'assets/places/lukas-budimaier-108076.jpg',
+    'img': 'assets/places/lake.jpg',
     'address': '71 Pilgrim Avenue Chevy Chase, MD 20815',
     'phone': 2515469442,
     'weather': {
-      'title': 'string',
+      'title': 'Weather on Lake',
       'icon': 'string',
       'water': 20,
       'temperature': 14
@@ -44,11 +44,11 @@ const places: Place[] = [
   },
   {
     'title': 'Vineyards',
-    'img': 'assets/places/karsten-wurth-inf1783-98124.jpg',
+    'img': 'assets/places/vineyards.jpg',
     'address': '71 Pilgrim Avenue Chevy Chase, MD 20815',
     'phone': 2515469442,
     'weather': {
-      'title': 'string',
+      'title': 'Weather on Vineyards',
       'icon': 'string',
       'water': 20,
       'temperature': 14
