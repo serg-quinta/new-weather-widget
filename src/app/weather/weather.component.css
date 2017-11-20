@@ -30,4 +30,5 @@
 }
 .weatherTemperature__value {
   font-size: 50px;
+  white-space: nowrap;
 }
