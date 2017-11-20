@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { WeatherComponent } from './weather/weather.component';
 import { SocialComponent } from './social/social.component';
-import { ProductsFilterPipe } from './common/pipes/products-filter.pipe';
+import { PlaceFilterPipe } from './common/pipes/place-filter.pipe';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import { ProductsFilterPipe } from './common/pipes/products-filter.pipe';
     CardComponent,
     WeatherComponent,
     SocialComponent,
-    ProductsFilterPipe
+    PlaceFilterPipe
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
 
   public places$: Observable<Place[]>;
   public loadImg = '../assets/images/gears.gif';
+  public filterText: string;
 
   constructor() { }
 
@@ -20,7 +21,7 @@ export class AppComponent implements OnInit {
     this.places$ = places$;
   }
 
-  public buttonClick(): void {
-    alert('Works!');
+  public buttonClick(value: string): void {
+    this.filterText = value;
   }
 }

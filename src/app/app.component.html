@@ -1,9 +1,9 @@
 <div class="widget">
   <h1>{{title}}</h1>
   <nav class="filter">
-    <ul class="filter__list nav">
+    <ul class="filter__list nav" (click)="buttonClick($event.target.textContent)">
       <li class="nav__item">
-        <button class="nav__itemBtn" (click)="buttonClick()">Hotel</button></li>
+        <button class="nav__itemBtn">Hotel</button></li>
       <li class="nav__item">
           <button class="nav__itemBtn">Fishing</button></li>
       <li class="nav__item">
@@ -11,7 +11,7 @@
     </ul>
   </nav>
   <div *ngIf="places$ | async as places; else loadGif">
-    <div *ngFor="let place of places">
+    <div *ngFor="let place of places | placeFilter:filterText">
       <app-card [place]=place></app-card>
     </div>
   </div>
