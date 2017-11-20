@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-social',
   templateUrl: './social.component.html',
   styleUrls: ['./social.component.css']
 })
-export class SocialComponent implements OnInit {
+export class SocialComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input()
+  public place: Place;
 
 }

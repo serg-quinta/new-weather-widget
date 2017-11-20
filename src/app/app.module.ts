@@ -5,7 +5,6 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { CardComponent } from './card/card.component';
 import { WeatherComponent } from './weather/weather.component';
 import { SocialComponent } from './social/social.component';
 import { PlaceFilterPipe } from './common/pipes/place-filter.pipe';
@@ -14,7 +13,6 @@ import { PlaceFilterPipe } from './common/pipes/place-filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent,
     WeatherComponent,
     SocialComponent,
     PlaceFilterPipe

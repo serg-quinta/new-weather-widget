@@ -3,6 +3,8 @@
   <nav class="filter">
     <ul class="filter__list nav" (click)="buttonClick($event.target.textContent)">
       <li class="nav__item">
+        <button class="nav__itemBtn">All</button></li>
+      <li class="nav__item">
         <button class="nav__itemBtn">Hotel</button></li>
       <li class="nav__item">
           <button class="nav__itemBtn">Fishing</button></li>
@@ -12,14 +14,27 @@
   </nav>
   <div *ngIf="places$ | async as places; else loadGif">
     <div *ngFor="let place of places | placeFilter:filterText">
-      <app-card [place]=place></app-card>
+      <mat-card>
+        <div class="placeTitle">{{place.title}}</div>
+        <div class="placeAddress">
+          <span class="placeLabel">Address:</span> {{place.address}}
+        </div>
+        <div class="placePhone">
+          <span class="placeLabel">Phone:</span> {{place.phone}}
+        </div>
+        <div class="placeImageContainer">
+          <app-weather [place]=place></app-weather>
+          <app-social [place]=place></app-social>
+          <img mat-card-image [src]="place.img" [alt]="place.title">
+        </div>
+      </mat-card>
     </div>
   </div>
   
-  <app-weather></app-weather>
-  <app-social></app-social>
 
   <ng-template #loadGif>
-    <img [src]="loadImg" alt="">
+    <div class="loading">
+      <img [src]="loadImg" alt="">
+    </div>
   </ng-template>
 </div>

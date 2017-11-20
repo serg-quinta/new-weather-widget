@@ -15,7 +15,7 @@ h1 {
   background-color: #fda660;
   border-radius: 2px;
   color: #fff;
-  padding: 24px;
+  padding: 12px;
   text-align: center;
 }
 
@@ -44,4 +44,33 @@ h1 {
 .nav__itemBtn:hover,
 .nav__itemBtn:focus {
   color: #313144;
+}
+
+.mat-card {
+  margin: 24px 0;
+}
+.placeTitle {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+.placeAddress {
+  margin-bottom: 12px;
+}
+.placePhone {
+  margin-bottom: 12px;
+}
+.placeLabel {
+  font-weight: 700;
+}
+.placeImageContainer {
+  position: relative;
+}
+
+.loading {
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 24px;
+  margin: 24px 0;
+  text-align: center;
 }

@@ -1,3 +1,8 @@
-<p>
-  weather works!
-</p>
+<div class="weather">
+  <div class="weatherTitle">{{place.weather.title}}</div>
+  <div class="weatherTemperature">
+    <img class="weatherTemperature__icon" [src]="place.weather.icon" [alt]="place.weather.title">
+    <span class="weatherTemperature__value">{{place.weather.temperature}}</span>
+  </div>
+  <div class="weatherWater">Water {{place.weather.water}}</div>
+</div>

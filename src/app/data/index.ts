@@ -11,15 +11,15 @@ const places: Place[] = [
     'phone': 6304468851,
     'weather': {
       'title': 'Weather on Road',
-      'icon': 'string',
-      'water': 20,
-      'temperature': 14
+      'icon': 'assets/weather/cloudy.svg',
+      'water': 18,
+      'temperature': 20
     },
     'social_info': {
-      'title': 'string',
-      'img': 'string',
-      'followers': 10,
-      'following': 15
+      'title': 'Social Road',
+      'img': 'assets/places/road.jpg',
+      'followers': 111,
+      'following': 155
     },
     'type': 'hotel'
   },
@@ -30,13 +30,13 @@ const places: Place[] = [
     'phone': 2515469442,
     'weather': {
       'title': 'Weather on Lake',
-      'icon': 'string',
+      'icon': 'assets/weather/sunny.svg',
       'water': 20,
-      'temperature': 14
+      'temperature': 28
     },
     'social_info': {
-      'title': 'string',
-      'img': 'string',
+      'title': 'Socila Lake',
+      'img': 'assets/places/lake.jpg',
       'followers': 10,
       'following': 15
     },
@@ -49,15 +49,15 @@ const places: Place[] = [
     'phone': 2515469442,
     'weather': {
       'title': 'Weather on Vineyards',
-      'icon': 'string',
-      'water': 20,
-      'temperature': 14
+      'icon': 'assets/weather/rainy.svg',
+      'water': 15,
+      'temperature': 10
     },
     'social_info': {
-      'title': 'string',
-      'img': 'string',
-      'followers': 10,
-      'following': 15
+      'title': 'Social Vineyards',
+      'img': 'assets/places/vineyards.jpg',
+      'followers': 222,
+      'following': 125
     },
     'type': 'tours'
   },

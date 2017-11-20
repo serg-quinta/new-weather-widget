@@ -22,6 +22,10 @@ export class AppComponent implements OnInit {
   }
 
   public buttonClick(value: string): void {
-    this.filterText = value;
+    if (value === 'All') {
+      this.filterText = '';
+    } else {
+      this.filterText = value;
+    }
   }
 }
