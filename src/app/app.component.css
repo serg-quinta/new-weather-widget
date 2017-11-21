@@ -12,19 +12,17 @@ h1 {
   margin: auto;
 }
 
-.filter {
+.nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   background-color: #fda660;
   border-radius: 2px;
   color: #fff;
   padding: 12px;
   text-align: center;
-}
-
-.nav {
-  display: inline-flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 .nav__item {
   border-left: 1px solid #fff;
@@ -85,6 +83,9 @@ h1 {
 }
 
 .isStick {
+  height: 44px;
+}
+.isStick .nav {
   position: fixed;
   top: 0;
   z-index: 101;
