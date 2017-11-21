@@ -9,6 +9,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { SocialComponent } from './social/social.component';
 import { PlaceFilterPipe } from './common/pipes/place-filter.pipe';
 import { PhonePipe } from './common/pipes/phone.pipe';
+import { StickyDirective } from './common/directives/sticky.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PhonePipe } from './common/pipes/phone.pipe';
     WeatherComponent,
     SocialComponent,
     PlaceFilterPipe,
-    PhonePipe
+    PhonePipe,
+    StickyDirective
   ],
   imports: [
     BrowserModule,
