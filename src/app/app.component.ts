@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   title = 'Hot Weather Widget';
 
   public places$: Observable<Place[]>;
-  public loadImg = '../assets/images/gears.gif';
+  public loadImg = 'assets/images/gears.gif';
   public filterText: string;
 
   constructor() { }
