@@ -63,6 +63,14 @@ h1 {
 .placeLabel {
   font-weight: 700;
 }
+.placePhone__number {
+  color: rgb(253, 123, 135);
+  text-decoration: none;
+}
+.placePhone__number:hover,
+.placePhone__number:focus {
+  text-decoration: underline;
+}
 .placeImageContainer {
   position: relative;
 }

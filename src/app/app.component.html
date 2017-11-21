@@ -15,12 +15,13 @@
   <div *ngIf="places$ | async as places; else loadGif">
     <div *ngFor="let place of places | placeFilter:filterText">
       <mat-card>
-        <div class="placeTitle">{{place.title}}</div>
+        <div class="placeTitle">{{ place.title }}</div>
         <div class="placeAddress">
-          <span class="placeLabel">Address:</span> {{place.address}}
+          <span class="placeLabel">Address:</span> {{ place.address }}
         </div>
         <div class="placePhone">
-          <span class="placeLabel">Phone:</span> {{place.phone}}
+          <span class="placeLabel">Phone:</span> 
+          <a class="placePhone__number" href="tel:{{ place.phone | phone }}">{{ place.phone | phone }}</a>
         </div>
         <div class="placeImageContainer">
           <app-weather [place]=place></app-weather>

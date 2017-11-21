@@ -2,7 +2,10 @@ type Place = {
   title: string,
   img: string,
   address: string,
-  phone: number,
+  phone: {
+    phone: string,
+    country: string
+  }
   weather: {
     title: string,
     icon: string,

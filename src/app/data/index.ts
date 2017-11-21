@@ -8,7 +8,10 @@ const places: Place[] = [
     'title': 'Road',
     'img': 'assets/places/road.jpg',
     'address': '123 6th St. Melbourne, FL 32904',
-    'phone': 6304468851,
+    'phone': {
+      'phone': '505412662',
+      'country': 'UA'
+    },
     'weather': {
       'title': 'Weather on Road',
       'icon': 'assets/weather/cloudy.svg',
@@ -21,13 +24,16 @@ const places: Place[] = [
       'followers': 111,
       'following': 155
     },
-    'type': 'hotel'
+    'type': 'tours'
   },
   {
     'title': 'Lake',
     'img': 'assets/places/lake.jpg',
     'address': '71 Pilgrim Avenue Chevy Chase, MD 20815',
-    'phone': 2515469442,
+    'phone': {
+      'phone': '2515469442',
+      'country': 'US'
+    },
     'weather': {
       'title': 'Weather on Lake',
       'icon': 'assets/weather/sunny.svg',
@@ -46,7 +52,10 @@ const places: Place[] = [
     'title': 'Vineyards',
     'img': 'assets/places/vineyards.jpg',
     'address': '71 Pilgrim Avenue Chevy Chase, MD 20815',
-    'phone': 2515469442,
+    'phone': {
+      'phone': '2515469442',
+      'country': 'DE'
+    },
     'weather': {
       'title': 'Weather on Vineyards',
       'icon': 'assets/weather/rainy.svg',
@@ -59,7 +68,7 @@ const places: Place[] = [
       'followers': 222,
       'following': 125
     },
-    'type': 'tours'
+    'type': 'hotel'
   },
 ];
 
