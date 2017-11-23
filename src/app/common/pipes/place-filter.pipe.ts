@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class PlaceFilterPipe implements PipeTransform {
 
-  transform(places: Place[], searchTerm: string): Place[] {
+  public transform(places: Place[], searchTerm: string): Place[] {
     if (!searchTerm) {
       return places;
     }

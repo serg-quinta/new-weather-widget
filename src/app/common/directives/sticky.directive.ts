@@ -1,19 +1,19 @@
-import { Directive, ElementRef, Input, HostListener, OnInit } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appSticky]'
 })
-export class StickyDirective implements OnInit {
+export class StickyDirective {
 
-  private _minY = 88;
-  private _className = 'isStick';
+  private _minY: number = 88;
+  private _className: string = 'isStick';
 
   public constructor(
     private _elementRef: ElementRef
   ) { }
 
   @HostListener('window:scroll')
-  handleScrollEvent(e) {
+  public handleScrollEvent(): void {
     if (window.pageYOffset > this._minY) {
       this._elementRef.nativeElement.classList.add(this._className);
     } else {
@@ -21,7 +21,4 @@ export class StickyDirective implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-    console.log(this._elementRef);
-  }
 }

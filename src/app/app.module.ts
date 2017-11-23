@@ -10,6 +10,7 @@ import { SocialComponent } from './social/social.component';
 import { PlaceFilterPipe } from './common/pipes/place-filter.pipe';
 import { PhonePipe } from './common/pipes/phone.pipe';
 import { StickyDirective } from './common/directives/sticky.directive';
+import { NavComponent } from './common/components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StickyDirective } from './common/directives/sticky.directive';
     SocialComponent,
     PlaceFilterPipe,
     PhonePipe,
-    StickyDirective
+    StickyDirective,
+    NavComponent
   ],
   imports: [
     BrowserModule,

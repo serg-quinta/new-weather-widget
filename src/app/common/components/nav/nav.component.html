@@ -1,0 +1,6 @@
+<nav class="filter" appSticky>
+  <ul class="filter__list nav">
+    <li *ngFor="let placeType of placeTypes" class="nav__item">
+      <button class="nav__itemBtn" (click)="buttonClick($event.target.textContent)">{{ placeType }}</button></li>
+  </ul>
+</nav>

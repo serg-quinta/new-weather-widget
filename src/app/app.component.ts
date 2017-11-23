@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { ParsedNumber } from 'libphonenumber-js';
 
 import { places$ } from './data';
 
@@ -10,23 +9,22 @@ import { places$ } from './data';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Hot Weather Widget';
+  public title: string = 'Hot Weather Widget';
 
   public places$: Observable<Place[]>;
-  public loadImg = 'assets/images/gears.gif';
+  public loadImg: string = 'assets/images/gears.gif';
   public filterText: string;
-
-  constructor() { }
 
   public ngOnInit(): void {
     this.places$ = places$;
   }
 
-  public buttonClick(value: string): void {
+  public onFilterChange(value: string): void {
     if (value === 'All') {
       this.filterText = '';
       return;
     }
     this.filterText = value;
   }
+
 }
