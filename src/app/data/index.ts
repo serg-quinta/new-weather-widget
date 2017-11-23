@@ -72,6 +72,9 @@ const places: Place[] = [
   },
 ];
 
+export const placeTypes: string[] = [
+  'All', 'Hotel', 'Fishing', 'Tours'
+];
 
 export const places$: Observable<Place[]> =
   Observable.of(places)

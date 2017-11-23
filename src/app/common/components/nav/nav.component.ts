@@ -1,8 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-
-const placeTypes: string[] = [
-  'All', 'Hotel', 'Fishing', 'Tours'
-];
+import { placeTypes } from '../../../data';
 
 @Component({
   selector: 'app-nav',
