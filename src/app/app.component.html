@@ -6,6 +6,7 @@
       <app-weather [place]=selectedPlace></app-weather>
       <app-social [place]=selectedPlace></app-social>
     </div>
+    <app-weather [place]=firstPlace></app-weather>
   </header>
   
   <div *ngIf="places$ | async as places; else loadGif">

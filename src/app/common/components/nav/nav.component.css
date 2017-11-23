@@ -30,6 +30,10 @@
 .nav__itemBtn:focus {
   color: #313144;
 }
+
+.isStick {
+  height: 44px;
+}
 .isStick .nav {
   position: fixed;
   top: 0;
