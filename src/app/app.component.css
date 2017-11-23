@@ -11,14 +11,26 @@ h1 {
   max-width: 600px;
   margin: auto;
 }
+.placeWidgets {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+}
 
 .mat-card {
   margin: 24px 0;
 }
+.selectedPlace {
+  background-color: #fda660;
+}
 .placeTitle {
+  cursor: pointer;
   font-size: 24px;
   font-weight: 900;
   margin-bottom: 12px;
+}
+.placeTitle:hover {
+  text-decoration: underline;
 }
 .placeAddress {
   margin-bottom: 12px;
@@ -36,9 +48,6 @@ h1 {
 .placePhone__number:hover,
 .placePhone__number:focus {
   text-decoration: underline;
-}
-.placeImageContainer {
-  position: relative;
 }
 
 .loading {

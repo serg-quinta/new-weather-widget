@@ -3,11 +3,7 @@
   border-radius: 2px;
   color: #fff;
   padding: 12px;
-  position: absolute;
-  top: 24px;
-  right: 0;
   text-align: center;
-  max-width: 45%;
   box-sizing: border-box;
 }
 .socialTitle {
@@ -37,4 +33,11 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+.social__footer {
+  display: flex;
+}
+.socialFollowers,
+.socialFollowing {
+  margin: 0 6px;
 }

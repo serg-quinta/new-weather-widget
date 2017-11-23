@@ -14,6 +14,8 @@ export class AppComponent implements OnInit {
   public places$: Observable<Place[]>;
   public loadImg: string = 'assets/images/gears.gif';
   public filterText: string;
+  public firstPlace: Place;
+  public selectedPlace: Place;
 
   public ngOnInit(): void {
     this.places$ = places$;
@@ -25,6 +27,16 @@ export class AppComponent implements OnInit {
       return;
     }
     this.filterText = value;
+  }
+
+  public chooseFirst(place: Place): void {
+    this.firstPlace = place;
+    // console.log(this.firstPlace.weather.title);
+  }
+
+  public selectPlace(place: Place): void {
+    this.selectedPlace = place;
+    // console.log(this.selectedPlace.weather.title);
   }
 
 }

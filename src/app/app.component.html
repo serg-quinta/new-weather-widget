@@ -1,11 +1,19 @@
 <div class="widget">
   <h1>{{title}}</h1>
-  <app-nav (onFilterChange)="onFilterChange($event)"></app-nav>
-
+  <header>
+    <app-nav (onFilterChange)="onFilterChange($event)"></app-nav>
+    <div *ngIf="selectedPlace" class="placeWidgets">
+      <app-weather [place]=selectedPlace></app-weather>
+      <app-social [place]=selectedPlace></app-social>
+    </div>
+  </header>
+  
   <div *ngIf="places$ | async as places; else loadGif">
-    <div *ngFor="let place of places | placeFilter:filterText">
-      <mat-card>
-        <div class="placeTitle">{{ place.title }}</div>
+    
+    <div *ngFor="let place of places | placeFilter:filterText; first as first;"
+      appInit [place]=place [first]=first (chooseFirst)="chooseFirst($event)">
+      <mat-card [class.selectedPlace]="place == selectedPlace">
+        <div class="placeTitle" (click)=selectPlace(place)>{{ place.title }}</div>
         <div class="placeAddress">
           <span class="placeLabel">Address:</span> {{ place.address }}
         </div>
@@ -13,11 +21,7 @@
           <span class="placeLabel">Phone:</span> 
           <a class="placePhone__number" href="tel:{{ place.phone | phone }}">{{ place.phone | phone }}</a>
         </div>
-        <div class="placeImageContainer">
-          <app-weather [place]=place></app-weather>
-          <app-social [place]=place></app-social>
-          <img mat-card-image [src]="place.img" [alt]="place.title">
-        </div>
+        <img mat-card-image [src]="place.img" [alt]="place.title">
       </mat-card>
     </div>
   </div>
