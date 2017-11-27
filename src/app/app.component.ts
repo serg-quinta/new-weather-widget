@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
-import { places$ } from './data';
+// import { places$ } from './data';
+import { PlacesService } from './common/services/places.service';
 
 @Component({
   selector: 'app-root',
@@ -17,8 +18,14 @@ export class AppComponent implements OnInit {
   public firstPlace: Place;
   public selectedPlace: Place;
 
+  public constructor(
+    private _placesService: PlacesService
+  ) {
+
+  }
+
   public ngOnInit(): void {
-    this.places$ = places$;
+    this.places$ = this._placesService.places$;
   }
 
   public onFilterChange(value: string): void {

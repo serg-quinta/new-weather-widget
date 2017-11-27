@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { WeatherComponent } from './weather/weather.component';
@@ -12,6 +13,7 @@ import { PhonePipe } from './common/pipes/phone.pipe';
 import { StickyDirective } from './common/directives/sticky.directive';
 import { NavComponent } from './common/components/nav/nav.component';
 import { InitDirective } from './common/directives/init.directive';
+import { PlacesService } from './common/services/places.service';
 
 @NgModule({
   declarations: [
@@ -27,9 +29,12 @@ import { InitDirective } from './common/directives/init.directive';
   imports: [
     BrowserModule,
     NoopAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    PlacesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

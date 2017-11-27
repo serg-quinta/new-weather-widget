@@ -2,23 +2,44 @@ h1 {
   color: #fff;
   font-family: 'Quicksand', sans-serif;
   font-size: 2em;
-  margin: 24px 0;
+  margin: 0 0 12px;
   text-align: center;
 }
 
 .widget {
+  box-sizing: border-box;
   color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   max-width: 600px;
   margin: auto;
+  padding: 12px 0;
+  overflow: hidden;
+}
+app-nav {
+  display: block;
+  margin-bottom: 12px;
+}
+.widget__content {
+  overflow: auto;
+  /* flex-grow: 1; */
+  /* flex-shrink: 0; */
 }
 .placeWidgets {
   display: flex;
   justify-content: space-between;
-  margin: 12px 0;
+  margin-bottom: 12px;
 }
 
-.mat-card {
-  margin: 24px 0;
+.widgetItem {
+  margin: 12px 0;
+}
+.widgetItem:first-child {
+  margin-top: 0;
+}
+.widgetItem:last-child {
+  margin-bottom: 0;
 }
 .selectedPlace {
   background-color: #fda660;
@@ -27,16 +48,9 @@ h1 {
   cursor: pointer;
   font-size: 24px;
   font-weight: 900;
-  margin-bottom: 12px;
 }
 .placeTitle:hover {
   text-decoration: underline;
-}
-.placeAddress {
-  margin-bottom: 12px;
-}
-.placePhone {
-  margin-bottom: 12px;
 }
 .placeLabel {
   font-weight: 700;
@@ -56,4 +70,9 @@ h1 {
   padding: 24px;
   margin: 24px 0;
   text-align: center;
+}
+
+app-weather,
+app-social {
+  width: calc(50% - 6px);
 }
