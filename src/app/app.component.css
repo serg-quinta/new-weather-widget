@@ -52,7 +52,7 @@ app-nav {
   margin-bottom: 0;
 }
 .selectedPlace {
-  background-color: #ccc;
+  background-color: #fda660;
 }
 .placeTitle {
   cursor: pointer;

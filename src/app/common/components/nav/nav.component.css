@@ -27,7 +27,8 @@
   padding: 0 12px;
 }
 .nav__itemBtn:hover,
-.nav__itemBtn:focus {
+.nav__itemBtn:focus,
+.nav__itemBtn--selected {
   color: #313144;
 }
 

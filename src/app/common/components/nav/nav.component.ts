@@ -8,11 +8,14 @@ import { placeTypes } from '../../../data';
 })
 export class NavComponent {
   public placeTypes: string[] = placeTypes;
+  public selectedBtn: string;
 
   @Output()
   public onFilterChange: EventEmitter<string> = new EventEmitter();
 
   public buttonClick(value: string): void {
     this.onFilterChange.emit(value);
+
+    this.selectedBtn = value;
   }
 }
