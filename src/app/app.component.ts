@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 // import { places$ } from './data';
-import { PlacesService } from './common/services/places.service';
 import 'rxjs/add/observable/interval';
 import 'rxjs/add/observable/fromEvent';
+import { PlacesService } from './common/services/places.service';
+import { SelectedPlaceService } from './common/services/selected-place.service';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ export class AppComponent implements OnInit {
   public selectedPlace: Place;
 
   public constructor(
-    private _placesService: PlacesService
+    private _placesService: PlacesService,
+    private _selectedPlaceService: SelectedPlaceService
   ) {
 
   }
@@ -45,9 +47,11 @@ export class AppComponent implements OnInit {
   // }
 
   public selectPlace(place: Place): void {
+
     this.selectedPlace = place;
+
     // tslint:disable-next-line
-    // console.log(this.selectedPlace.weather.title);
+    // console.log(this.selectedPlace);
   }
 
 }

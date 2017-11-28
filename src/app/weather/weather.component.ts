@@ -19,6 +19,7 @@ export class WeatherComponent implements OnInit {
     this._selectedPlaceService.selectedPlace$$.subscribe({
       next: (place: Place) => {
         this.place = place;
+        // console.log(this.place.title);
       }
     });
   }
