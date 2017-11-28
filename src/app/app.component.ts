@@ -3,6 +3,8 @@ import { Observable } from 'rxjs/Observable';
 
 // import { places$ } from './data';
 import { PlacesService } from './common/services/places.service';
+import 'rxjs/add/observable/interval';
+import 'rxjs/add/observable/fromEvent';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +17,7 @@ export class AppComponent implements OnInit {
   public places$: Observable<Place[]>;
   public loadImg: string = 'assets/images/gears.gif';
   public filterText: string;
-  public firstPlace: Place;
+  // public firstPlace: Place;
   public selectedPlace: Place;
 
   public constructor(
@@ -36,13 +38,15 @@ export class AppComponent implements OnInit {
     this.filterText = value;
   }
 
-  public chooseFirst(place: Place): void {
-    this.firstPlace = place;
-    // console.log(this.firstPlace.weather.title);
-  }
+  // public chooseFirstPlace(place: Place): void {
+  //   this.firstPlace = place;
+  //   // tslint:disable-next-line
+  //   console.log(this.firstPlace.weather.title);
+  // }
 
   public selectPlace(place: Place): void {
     this.selectedPlace = place;
+    // tslint:disable-next-line
     // console.log(this.selectedPlace.weather.title);
   }
 

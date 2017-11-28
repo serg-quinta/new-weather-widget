@@ -1,4 +1,11 @@
-import { Directive, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Directive,
+  EventEmitter,
+  Input,
+  OnInit,
+  // Output
+} from '@angular/core';
+import { SelectedPlaceService } from '../services/selected-place.service';
 
 @Directive({
   selector: '[appInit]'
@@ -11,12 +18,17 @@ export class InitDirective implements OnInit {
   @Input()
   public first: boolean;
 
-  @Output()
-  public chooseFirst: EventEmitter<Place> = new EventEmitter();
+  // @Output()
+  // public chooseFirstDirective: EventEmitter<Place> = new EventEmitter();
 
+  public constructor(
+    private _selectedPlaceService: SelectedPlaceService
+  ) {
+
+  }
   public ngOnInit(): void {
     this.first
-      ? this.chooseFirst.emit(this.place)
+      ? this._selectedPlaceService.selectedPlace$$.next(this.place)
       : null;
   }
 

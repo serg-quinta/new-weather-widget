@@ -26,6 +26,16 @@ app-nav {
   /* flex-grow: 1; */
   /* flex-shrink: 0; */
 }
+.widget__content::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+.widget__content::-webkit-scrollbar {
+  background-color: #f5f5f5;
+  width: 5px;
+}
+.widget__content::-webkit-scrollbar-thumb {
+  background-color: #fda660;
+}
 .placeWidgets {
   display: flex;
   justify-content: space-between;
@@ -42,7 +52,7 @@ app-nav {
   margin-bottom: 0;
 }
 .selectedPlace {
-  background-color: #fda660;
+  background-color: #ccc;
 }
 .placeTitle {
   cursor: pointer;
@@ -68,7 +78,6 @@ app-nav {
   background-color: #fff;
   border-radius: 2px;
   padding: 24px;
-  margin: 24px 0;
   text-align: center;
 }
 

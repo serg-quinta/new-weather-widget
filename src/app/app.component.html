@@ -1,16 +1,16 @@
-<div class="widget">
+<div *ngIf="places$ | async as places; else loadGif" class="widget">
   <header class="widget__header">
     <h1>{{title}}</h1>
     <app-nav (onFilterChange)="onFilterChange($event)"></app-nav>
-    <div *ngIf="selectedPlace" class="placeWidgets">
-      <app-weather [place]=selectedPlace></app-weather>
+    <div class="placeWidgets">
+      <app-weather [place]="selectedPlace"></app-weather>
       <app-social [place]=selectedPlace></app-social>
     </div>
   </header>
   
-  <div *ngIf="places$ | async as places; else loadGif" class="widget__content">
+  <div class="widget__content">
     <div *ngFor="let place of places | placeFilter:filterText; first as first;"
-      appInit [place]=place [first]=first (chooseFirst)="chooseFirst($event)" class="widgetItem">
+      appInit [place]=place [first]=first class="widgetItem">
       <mat-card [class.selectedPlace]="place == selectedPlace">
         <mat-card-header>
           <mat-card-title class="placeTitle" (click)=selectPlace(place)>{{ place.title }}</mat-card-title>
@@ -27,10 +27,12 @@
     </div>
   </div>
   
-
-  <ng-template #loadGif>
+</div>
+<ng-template #loadGif>
+  <div class="widget">
+    <h1>{{title}}</h1>
     <div class="loading">
       <img [src]="loadImg" alt="">
     </div>
-  </ng-template>
-</div>
+  </div>
+</ng-template>

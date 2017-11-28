@@ -14,6 +14,7 @@ import { StickyDirective } from './common/directives/sticky.directive';
 import { NavComponent } from './common/components/nav/nav.component';
 import { InitDirective } from './common/directives/init.directive';
 import { PlacesService } from './common/services/places.service';
+import { SelectedPlaceService } from './common/services/selected-place.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PlacesService } from './common/services/places.service';
     HttpClientModule
   ],
   providers: [
-    PlacesService
+    PlacesService,
+    SelectedPlaceService
   ],
   bootstrap: [AppComponent]
 })

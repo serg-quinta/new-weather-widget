@@ -73,7 +73,7 @@ const places: Place[] = [
 ];
 
 export const placeTypes: string[] = [
-  'All', 'Hotel', 'Fishing', 'Tours'
+  'All', 'Roads', 'Lakes', 'Vineyards'
 ];
 
 export const places$: Observable<Place[]> =
